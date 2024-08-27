@@ -1,0 +1,247 @@
+@font-face {
+    font-family: 'ArabicPixel';
+    src: url('arabic-pixel-1.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'PixelFont';
+    src: url('slkscr.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'ArabicPixel', sans-serif;
+    background-color: #0D0D0C;
+    color: #E9DEC6;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+p {
+    font-family: 'PixelFont';
+}
+
+h1 {
+    color: #E9DEC6;
+    margin: 20px;
+    font-size: 3em;
+    text-align: right;
+    width: calc(100% - 40px);
+    font-family: 'ArabicPixel', sans-serif;
+}
+
+h2 {
+    color: #E9DEC6;
+    margin: 20px;
+    font-size: 1em;
+    text-align: center;
+    width: calc(100% - 40px);
+    font-family: 'ArabicPixel', 'PixelFont';
+}
+
+.navbar {
+    width: 100%;
+    background-color: #0D0D0C;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.navbar a {
+    font-family: 'PixelFont', sans-serif;
+    color: #E9DEC6;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+}
+
+.navbar a i {
+    margin-right: 8px;
+    color: #30BFBF;
+}
+
+.navbar a:hover {
+    color: #30BFBF;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.repo {
+    border: 1px solid #E9DEC6;
+    padding: 20px;
+    color: #E9DEC6;
+    background-color: transparent;
+    box-shadow: none;
+    font-family: 'PixelFont', sans-serif;
+}
+
+.repo h2 {
+    margin-top: 0;
+    color: #30BFBF;
+}
+
+.repo p {
+    color: #E9DEC6;
+}
+
+a {
+    color: #30BFBF;
+    text-decoration: none;
+    font-family: 'PixelFont', sans-serif;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: transparent;
+    border: 2px solid #E9DEC6;
+    color: #E9DEC6;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'PixelFont', sans-serif;
+}
+
+button:hover {
+    background-color: #E9DEC6;
+    color: #0D0D0C;
+}
+
+input, textarea {
+    background-color: transparent;
+    border: 1px solid #E9DEC6;
+    color: #E9DEC6;
+    font-family: 'PixelFont', sans-serif;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+}
+
+.upload-container {
+    background-color: #0D0D0C;
+    border: 2px solid #E9DEC6;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem auto;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.upload-container h2 {
+    color: #E9DEC6;
+}
+
+.posts-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    width: 90%;
+}
+
+.vertical-square {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #E9DEC6;
+    background-color: #0D0D0C;
+    padding: 1rem;
+    box-sizing: border-box;
+    max-width: 600px;
+    width: 100%;
+    height: 600px;
+    overflow-y: auto;
+}
+
+.posts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.post-container {
+    background-color: #0D0D0C;
+    border: 2px solid #E9DEC6;
+    padding: 1rem;
+    margin: 1rem auto;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.post-container h2 {
+    color: #E9DEC6;
+}
+
+.post-container p {
+    color: #E9DEC6;
+}
+
+.comments-section {
+    margin-top: 20px;
+    border-top: 2px solid #E9DEC6;
+    padding-top: 10px;
+}
+
+/* Responsive styles */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+        margin: 10px;
+    }
+
+    .navbar a {
+        font-size: 1.2em;
+        margin: 0 10px;
+    }
+
+    .container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+        margin: 5px;
+    }
+
+    .navbar a {
+        font-size: 1em;
+        margin: 0 5px;
+    }
+
+    .container {
+        width: 100%;
+    }
+}
+.gif-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.gif-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px; /* Optional: to match the box styling */
+}
